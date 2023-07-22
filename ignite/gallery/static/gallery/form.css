@@ -1,0 +1,86 @@
+/* Add the following CSS to your main.css file */
+.form-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.form-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    width: 400px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.input-box {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.select-box {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=UTF-8, <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: lightblue;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #ddd;
+}
+
+/* Styles for the "Add Image" button */
+#add-image-button {
+    display: block;
+    margin: 10px auto; /* Center the button horizontally and add some space around it */
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: lightblue; /* Light blue background color */
+    color: black;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover effect: Turn gray on hover */
+#add-image-button:hover {
+    background-color: #ddd; /* Gray background color on hover */
+}
+
+/* Styles for smaller screens (when the screen width is less than or equal to 500px, adjust as needed) */
+@media screen and (max-width: 500px) {
+    /* Restyle the "Add Image" button on smaller screens */
+    #add-image-button {
+        background-color: #ddd; /* Light gray background color */
+    }
+}

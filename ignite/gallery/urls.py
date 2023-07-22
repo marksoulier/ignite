@@ -4,12 +4,12 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    # ex: /
-    path("", views.projects, name="index"),
-    path("<str:project_category>/", views.projects, name="projects"),
+    path("project_form/", views.submit_project, name="submit_project"),
+    path("completed_form/", views.completed_form, name="completed_form"),
     # ex: /project/1/
     path("project/<int:project_id>/", views.project_view, name="project_view"),
-    path("project/submit/", views.submit_project, name="submit_project"),
+    path("<str:project_category>/", views.projects, name="projects"),
+    path("", views.projects, name="index"),
 ]
 
 # Serving media files during development

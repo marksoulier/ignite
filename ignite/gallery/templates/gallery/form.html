@@ -2,26 +2,113 @@
 
 {% block content %}
     <h1>Project Submission Form</h1>
-    <form action="" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <label for="name">Project Name:</label>
-        <input type="text" id="name" name="name" required><br>
+    <div class="form-body">
+        <form action="" method="post" enctype="multipart/form-data" class="form-container">
+            {% csrf_token %}
+            
+            <div class="form-row">
+                <label for="name">Project Name:</label>
+                <input type="text" id="name" name="name" class="input-box" required>
+            </div>
 
-        <label for="owner">Owner:</label>
-        <input type="text" id="owner" name="owner" required><br>
+            <div class="form-row">
+                <label for="owner">Owner:</label>
+                <input type="text" id="owner" name="owner" class="input-box" required>
+            </div>
 
-        <label for="description">Description:</label><br>
-        <textarea id="description" name="description" rows="4" required></textarea><br>
+            <div class="form-row">
+                <label for="team">Team:</label>
+                <input type="text" id="team" name="team" class="input-box">
+            </div>
 
-        <label for="date_made">Date Made:</label>
-        <input type="date" id="date_made" name="date_made" required><br>
+            <div class="form-row">
+                <label for="description">Description:</label><br>
+                <textarea id="description" name="description" rows="4" class="input-box" required></textarea>
+            </div>
 
-        <label for="category">Category:</label>
-        <input type="text" id="category" name="category" required><br>
+            <div class="form-row">
+                <label for="related_links">Related Links:</label>
+                <input type="text" id="related_links" name="related_links" class="input-box">
+            </div>
 
-        <label for="image">Image:</label>
-        <input type="file" id="image" name="image" accept="image/*" required><br>
+            <div class="form-row">
+                <label for="date_made">Date Made:</label>
+                <input type="date" id="date_made" name="date_made" class="input-box" required>
+            </div>
 
-        <input type="submit" value="Submit">
-    </form>
+            <div class="form-row">
+                <label for="category">Category:</label>
+                <select id="category" name="category" class="input-box" required>
+                    <option value="class">Class</option>
+                    <option value="research">Research</option>
+                    <option value="fun">Fun</option>
+                    <option value="work">Work</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-row" id="other-category-box" style="display: none;">
+                <label for="other_category">Other Category:</label>
+                <input type="text" id="other_category" name="other_category" class="input-box">
+            </div>
+
+            <div class="form-row">
+                <label for="sub_category">Sub Category:</label>
+                <input type="text" id="sub_category" name="sub_category" class="input-box">
+            </div>
+
+            <div class="form-row">
+                <label for="entity">Entity:</label>
+                <input type="text" id="entity" name="entity" class="input-box">
+            </div>
+        
+            <div class="form-row">
+                <label for="image">Image 1:</label>
+                <input type="file" id="image" name="image" accept="image/*">
+            </div>
+
+            <div id="additional-images" style="display: none;">
+                <!-- Additional image inputs will be added here dynamically -->
+            </div>
+        
+            <button type="button" id="add-image-button">Add Image</button>
+
+            <div class="form-row">
+                <label for="contact_info">Contact Info:</label>
+                <input type="text" id="contact_info" name="contact_info" class="input-box">
+            </div>
+
+            <div class="form-row">
+                <input type="submit" value="Submit" class="submit-button">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('category').addEventListener('change', function() {
+            var otherCategoryBox = document.getElementById('other-category-box');
+            if (this.value === 'other') {
+                otherCategoryBox.style.display = 'block';
+            } else {
+                otherCategoryBox.style.display = 'none';
+            }
+        });
+        document.getElementById('add-image-button').addEventListener('click', function() {
+            var additionalImages = document.getElementById('additional-images');
+            var imageCount = additionalImages.querySelectorAll('input[type="file"]').length;
+    
+            if (imageCount < 4) {
+                var newImageInput = document.createElement('div');
+                newImageInput.className = 'form-row';
+                newImageInput.innerHTML = `
+                    <label for="image${imageCount + 2}">Image ${imageCount + 2}:</label>
+                    <input type="file" id="image${imageCount + 2}" name="image${imageCount + 2}" accept="image/*">
+                `;
+                additionalImages.appendChild(newImageInput);
+            }
+    
+            // Show the additional-images div when the button is clicked
+            additionalImages.style.display = 'block';
+        });
+    </script>
 {% endblock %}

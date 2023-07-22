@@ -22,9 +22,30 @@ def submit_project(request):
     if request.method == "POST":
         form = ProjectForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            return redirect('index')  # Redirect to a success page after form submission
+            # Save the form data without committing to the database yet
+            project = form.save(commit=False)
+
+            # Check if the optional fields are empty and set them to default values if so
+            project.sub_category = form.cleaned_data.get("sub_category", "No sub category")
+            project.related_links = form.cleaned_data.get("related_links", "No related links")
+            project.contact_info = form.cleaned_data.get("contact_info", "No contact info")
+            team_list = form.cleaned_data.get("team")
+            if team_list:
+                project.set_team(team_list)
+            else:
+                project.set_team([])
+
+            # Save the project with all the data
+            project.save()
+
+            return redirect('completed_form')  # Redirect to a success page after form submission
+        else:
+            print(form.errors)
+            print(form.cleaned_data)
     else:
         form = ProjectForm()
 
     return render(request, "gallery/form.html", {"form": form})
+
+def completed_form(request):
+    return render(request, "gallery/completed_form.html", {})

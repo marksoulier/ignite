@@ -1,0 +1,27 @@
+{% extends "gallery/base.html" %}
+
+{% block content %}
+    <h1>Project Submission Form</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="name">Project Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="owner">Owner:</label>
+        <input type="text" id="owner" name="owner" required><br>
+
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" required></textarea><br>
+
+        <label for="date_made">Date Made:</label>
+        <input type="date" id="date_made" name="date_made" required><br>
+
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required><br>
+
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

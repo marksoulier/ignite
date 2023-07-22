@@ -1,0 +1,15 @@
+{% extends "gallery/base.html" %}
+
+{% block content %}
+    <h1>{{ project.name }}</h1>
+    <p>Owner: {{ project.owner }}</p>
+    <p>Description: {{ project.description }}</p>
+    <p>Date Made: {{ project.date_made }}</p>
+    <p>Category: {{ project.category }}</p>
+
+    {% if project.image %}
+        <img src="{{ project.image.url }}" alt="{{ project.name }} Image" style="max-width: 300px;">
+    {% endif %}
+
+    <!-- Display additional attributes -->
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "gallery/base.html" %}
+
+{% block content %}
+    <h1>Project Gallery</h1>
+    <div class="gallery">
+        {% for project in projects_list %}
+        <div class="project-item">
+            <a href="project/{{project.id}}">
+                <img src="{{ project.image.url }}" alt="{{ project.name }}" class="project-image">
+                <p>{{ project.name }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

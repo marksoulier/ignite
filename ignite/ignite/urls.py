@@ -19,6 +19,7 @@ from django.urls import include, path
 
 urlpatterns = [
     #path is passed route, view
+    path("", include("gallery.urls")),
     path("project_form/", include("project_form.urls")),
     path('admin/', admin.site.urls),
 ]

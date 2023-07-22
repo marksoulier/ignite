@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignite Engineering</title>
+    <style>
+        /* Basic styling for the navigation bar */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* White background */
+        }
+
+        nav {
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .ignite-logo {
+            max-width: 50px; /* Smaller image width */
+            height: auto;
+        }
+
+        /* Centering the logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        /* Some basic styling for the gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+    
+        .project-item {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    
+        .project-image {
+            max-width: 150px;
+            max-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <div class="logo-container">
+            <div class="ignite-logo">
+                <img src="{% static 'images/ignite_logo2.png' %}" alt="Ignite Engineering Logo" width="200" 
+                height="100" />
+            </div>
+        </div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/class/">Class</a>
+            <a href="/research/">Research</a>
+            <a href="/fun/">Fun</a>
+            <a href="/project/submit/">Form</a>
+        </div>
+    </nav>
+
+    <!-- Content block that will be overridden by child templates -->
+    {% block content %}{% endblock %}
+
+    <!-- Add common scripts or footer content here -->
+</body>
+</html>

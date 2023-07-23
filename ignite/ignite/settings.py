@@ -17,7 +17,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 #make a media directory that information can be stored
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = str(Path(BASE_DIR, 'media'))
 MEDIA_URL = '/media/'
 
 

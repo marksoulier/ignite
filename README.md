@@ -26,8 +26,8 @@ models can be applied so several objects can be connected to another object. Thi
 
 go to the admin site.
 Run the server and add /admin to the url. 
-username: user
-password: igniteUSU
+username: admin
+password: password
 
 
 

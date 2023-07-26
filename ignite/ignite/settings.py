@@ -27,9 +27,9 @@ MEDIA_URL = '/media/'
 SECRET_KEY = 'django-insecure-csb&=xmtu2z@@)b5kktgu^k+ypeqqagwy_grrgmu2%0#ol3%6e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ignitengineering.com', 'www.ignitengineering.com','129.123.5.183']
 
 
 # Application definition

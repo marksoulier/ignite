@@ -1,12 +1,54 @@
 # ignite
 Ignite website for the USU Ignite program
 
+## To start website
+To start website 
 
-Website is the ignite website. It will contain 2 apps. One app for displaying the gallary of the database of projects. The other is a form for submitting a project.
+create a python virtual environment
+```
+python -m venv venv
+```
+
+activate the virtual environment
+```
+source venv/bin/activate
+```
+
+install depedenices
+```
+pip install Django Pillow
+```
+
+clone the project
+```
+git clone https://github.com/marksoulier/ignite.git
+```
+
+run the server (go to where manage.py is located)
+```
+python manage.py runserver
+```
+
+go to the website that the terminal outputs
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes:
+
 
 When starting a new project have the urls set up to run the veiws. Then link the app urls to the main website urls.
 
-to run webiste start from base directroy and run
+to run website start from base directroy and run
 ```
 python manage.py runserver
 ```

@@ -2,14 +2,42 @@
 
 {% block content %}
     <h1>{{ project.name }}</h1>
+    <p>Name: {{ project.name }}</p>
     <p>Owner: {{ project.owner }}</p>
+    <p>Team: {{ project.team }}</p>
+    <p>Contact Info: {{ project.contact_info }}</p>
+    <p>Related Links: {{ project.related_links }}</p>
     <p>Description: {{ project.description }}</p>
     <p>Date Made: {{ project.date_made }}</p>
     <p>Category: {{ project.category }}</p>
+    <p>Sub Category: {{ project.sub_category }}</p>
+    <p>Entity: {{ project.entity }}</p>
 
     {% if project.image %}
         <img src="{{ project.image.url }}" alt="{{ project.name }} Image" style="max-width: 300px;">
     {% endif %}
 
-    <!-- Display additional attributes -->
+    {% if project.image2 %}
+        <img src="{{ project.image2.url }}" alt="{{ project.name }} Image 2" style="max-width: 300px;">
+    {% else %}
+        <p>No Image 2</p>
+    {% endif %}
+
+    {% if project.image3 %}
+        <img src="{{ project.image3.url }}" alt="{{ project.name }} Image 3" style="max-width: 300px;">
+    {% else %}
+        <p>No Image 3</p>
+    {% endif %}
+
+    {% if project.image4 %}
+        <img src="{{ project.image4.url }}" alt="{{ project.name }} Image 4" style="max-width: 300px;">
+    {% else %}
+        <p>No Image 4</p>
+    {% endif %}
+
+    {% if project.image5 %}
+        <img src="{{ project.image5.url }}" alt="{{ project.name }} Image 5" style="max-width: 300px;">
+    {% else %}
+        <p>No Image 5</p>
+    {% endif %}
 {% endblock %}

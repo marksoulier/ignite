@@ -4,4 +4,29 @@
 
 {% comment %} Content for making the category description  {% endcomment %}
 
+<div class="category-block">
+    <h2>{{category}}</h2>
+  </div>
+  <div class="category2-block">
+    <p>
+        {% if category %}
+            {% if category == 'class' %}
+                This section contains projects related to academic courses and class assignments.
+            {% elif category == 'research' %}
+                This section showcases research projects and experiments conducted by students.
+            {% elif category == 'club' %}
+                Explore projects created by student clubs and organizations.
+            {% elif category == 'fun' %}
+                Discover fun and creative projects undertaken by students.
+            {% else %}
+                There are currently no projects in this category.
+            {% endif %}
+        {% else %}
+            Please select a category from the navigation bar to view projects.
+        {% endif %}
+    </p>
+</div>
+
+
+
 {% endblock %}

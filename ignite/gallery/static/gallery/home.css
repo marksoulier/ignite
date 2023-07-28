@@ -9,6 +9,18 @@
     font-size: 36px;
     color: #333; /* Dark gray text color */
   }
+
+.category-block {
+    text-align: center;
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 5px 0;
+  }
+  
+  .category-block h2 {
+    font-size: 36px;
+    color: #333; /* Dark gray text color */
+  }
+
   
   /* Style for the second block */
   .second-block {
@@ -21,6 +33,18 @@
     line-height: 1.6;
   }
   
+
+   /* Style for the second block */
+   .category2-block {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .categor2-block p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
   /* Style for the third block */
   .third-block {
     background-color: #fffae6; /* Yellowish tint background */

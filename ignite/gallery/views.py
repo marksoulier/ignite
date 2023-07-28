@@ -12,7 +12,7 @@ def projects(request, project_category=None):
         projects_list = approved_projects.filter(category=project_category)
         context = {
             "projects_list": projects_list,
-            # "category": project_category,
+            "category": project_category,
         }
         return render(request, "gallery/category_description.html", context)
     else:

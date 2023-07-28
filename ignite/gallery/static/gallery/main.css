@@ -32,8 +32,46 @@ nav {
 @media screen and (max-width: 500px) {
     .nav-links {
         flex-direction: column;
-        margin-bottom: 10px;
-        background-color: #ddd;
+        width: 100%;
+    }
+
+    .nav-li{
+        width: 100%;
+        display: flex; /* Use flexbox */
+        justify-content: center; /* Center the content horizontally */
+    }
+
+    .nav-link {
+        /* width: 100%; Make the li elements extend the whole screen width */
+        /* text-align: center; Center the text within the li elements */
+        width: 50%;
+        text-align: center;
+        /* border: 1px solid rgb(0, 0, 0); Border style, width, and color */
+        background-color: #eee;
+        /* background-color: #fff; White background for li elements */
+        transition: background-color 0.3s ease; /* Smooth transition effect */
+    }
+
+    .nav-link:hover {
+        background-color: #ff8282; /* Darker gray background on hover */
+    }
+
+    /* Styling for the "Add Project" link */
+    .project-nav-link {
+        text-align: center;
+        width: 50%;
+        margin: 0 10px;
+        color: black;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        background-color: lightblue; /* Light blue background color */
+        transition: background-color 0.3s ease; /* Smooth transition effect */
+    }
+
+    /* Hover effect: Turn gray on hover */
+    .project-nav-link:hover {
+        background-color: #ddd; /* Gray background color on hover */
     }
 }
 
@@ -43,6 +81,7 @@ nav {
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
 .nav-link:hover {
@@ -84,14 +123,14 @@ nav {
 /* Some basic styling for the gallery */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
 }
 
 .project-item {
     text-align: center;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 20px;
 }
 
 .project-image {

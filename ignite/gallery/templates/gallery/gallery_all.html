@@ -1,6 +1,7 @@
 {% extends "gallery/base.html" %}
 
-{% block content %}
+{% block content%}
+    {% block description%} {% endblock %}
     <h1>USU Project Gallery</h1>
     <div class="gallery">
         {% for project in projects_list %}

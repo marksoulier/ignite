@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ignite Engineering</title>
+    <link rel="icon" type="image/png" href="{% static 'images/ieee_icon.ico' %}">
     <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="{% static 'gallery/main.css' %}">
     <link rel="stylesheet" href="{% static 'gallery/form.css' %}">
+    <link rel="stylesheet" href="{% static 'gallery/main.css' %}">
+    <link rel="stylesheet" href="{% static 'gallery/home.css' %}">
+
 </head>
 <body>
     <!-- Navigation bar -->
@@ -20,11 +23,12 @@
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="{% url 'index' %}" class="nav-link">Home</a></li>
-                <li><a href="{% url 'projects' project_category='class'%}" class="nav-link">Class</a></li>
-                <li><a href="{% url 'projects' project_category='research'%}" class="nav-link">Research</a></li>
-                <li><a href="{% url 'projects' project_category='fun'%}" class="nav-link">Fun</a></li>
-                <li><a href="{% url 'submit_project' %}" class="project-nav-link">+ Add Project</a></li>
+                <li class="nav-li"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+                <li class="nav-li"><a href="{% url 'projects' project_category='class'%}" class="nav-link">Class</a></li>
+                <li class="nav-li"><a href="{% url 'projects' project_category='research'%}" class="nav-link">Research</a></li>
+                <li class="nav-li"><a href="{% url 'projects' project_category='club'%}" class="nav-link">Club</a></li>
+                <li class="nav-li"><a href="{% url 'projects' project_category='fun'%}" class="nav-link">Fun</a></li>
+                <li class="nav-li"><a href="{% url 'submit_project' %}" class="project-nav-link">+ Add Project</a></li>
             </ul>
         </div>
     </nav>

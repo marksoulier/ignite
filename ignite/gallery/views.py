@@ -4,14 +4,23 @@ from .form import ProjectForm
 # Create your views here.
 
 def projects(request, project_category=None):
+    # Retrieve all approved projects sorted by submitted_date in descending order
+    approved_projects = Project.objects.filter(approved=True).order_by('-submitted_date')
+
+    # If project_category is provided, filter the approved projects based on the category
     if project_category:
-        projects_list = Project.objects.filter(category=project_category)
+        projects_list = approved_projects.filter(category=project_category)
+        context = {
+            "projects_list": projects_list,
+            # "category": project_category,
+        }
+        return render(request, "gallery/category_description.html", context)
     else:
-        projects_list = Project.objects.all()
-    context = {
-        "projects_list": projects_list,
-    }
-    return render(request, "gallery/index.html", context)
+        projects_list = approved_projects
+        context = {
+            "projects_list": projects_list,
+        }
+        return render(request, "gallery/home_description.html", context)
 
 def project_view(request, project_id):
     project = get_object_or_404(Project, pk=project_id)

@@ -47,3 +47,21 @@ class Project(models.Model):
         if self.team:
             return json.loads(self.team)
         return []
+    
+    def get_related_links(self):
+        # Retrieve the related_links string from the database and convert it back to a list
+        if self.related_links and self.related_links != "No related links":
+            return self.related_links.split(",")
+        return []
+
+    def get_contact_info(self):
+        # Retrieve the contact_info string from the database and convert it back to a list
+        if self.contact_info and self.contact_info != "No contact info":
+            return self.contact_info.split(",")
+        return []
+    
+    def get_team(self):
+        # Retrieve the team string from the database and convert it back to a list
+        if self.team:
+            return self.team.split(",")
+        return []

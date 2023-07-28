@@ -4,9 +4,26 @@
     <h1>{{ project.name }}</h1>
     <p>Name: {{ project.name }}</p>
     <p>Owner: {{ project.owner }}</p>
-    <p>Team: {{ project.team }}</p>
-    <p>Contact Info: {{ project.contact_info }}</p>
-    <p>Related Links: {{ project.related_links }}</p>
+    <p>Team:</p>
+    <ul>
+        {% for team_member in project.get_team %}
+            <li>{{ team_member }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>Contact Info:</p>
+    <ul>
+        {% for contact in project.get_contact_info %}
+            <li>{{ contact }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>Related Links:</p>
+    <ul>
+        {% for link in project.get_related_links %}
+            <li>{{ link }}</li>
+        {% endfor %}
+    </ul>
     <p>Description: {{ project.description }}</p>
     <p>Date Made: {{ project.date_made }}</p>
     <p>Category: {{ project.category }}</p>

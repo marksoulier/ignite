@@ -35,7 +35,6 @@ ALLOWED_HOSTS = ['ignitengineering.com', 'www.ignitengineering.com','129.123.5.1
 # Application definition
 
 INSTALLED_APPS = [
-    'project_form.apps.ProjectFormConfig',
     'gallery.apps.GalleryConfig',
     'django.contrib.admin',
     'django.contrib.auth',

@@ -14,26 +14,31 @@
             <div class="form-row">
                 <label for="owner">Owner:</label>
                 <input type="text" id="owner" name="owner" class="input-box" required>
+                <p class="instructions">Please enter your first and last name.</p>
             </div>
 
             <div class="form-row">
                 <label for="team">Team:</label>
                 <input type="text" id="team" name="team" class="input-box">
+                <p class="instructions">If applicable, list the names of other students or faculty who participated in the project (comma-separated).</p>
             </div>
 
             <div class="form-row">
                 <label for="description">Description:</label><br>
                 <textarea id="description" name="description" rows="4" class="input-box" required></textarea>
+                <p class="instructions">Please provide a quick overview of the project.</p>
             </div>
 
             <div class="form-row">
                 <label for="related_links">Related Links:</label>
                 <input type="text" id="related_links" name="related_links" class="input-box">
+                <p class="instructions">Include any related articles, tutorials, websites, books, etc. (comma-separated).</p>
             </div>
 
             <div class="form-row">
                 <label for="date_made">Date Made:</label>
                 <input type="date" id="date_made" name="date_made" class="input-box" required>
+                <p class="instructions">Please enter a date that reflects when the project took place. If ongoing, use today's date.</p>
             </div>
 
             <div class="form-row">
@@ -42,9 +47,11 @@
                     <option value="class">Class</option>
                     <option value="research">Research</option>
                     <option value="fun">Fun</option>
+                    <option value="club">Club</option>
                     <option value="work">Work</option>
                     <option value="other">Other</option>
                 </select>
+                <p class="instructions">Please select the closest category that fits your project. If no specific category, select "Other".</p>
             </div>
 
             <div class="form-row" id="other-category-box" style="display: none;">
@@ -55,11 +62,13 @@
             <div class="form-row">
                 <label for="sub_category">Sub Category:</label>
                 <input type="text" id="sub_category" name="sub_category" class="input-box">
+                <p class="instructions">Please enter a sub-category that closely relates to your project's field.</p>
             </div>
 
             <div class="form-row">
                 <label for="entity">Entity:</label>
                 <input type="text" id="entity" name="entity" class="input-box">
+                <p class="instructions">If your project was done with a business, lab, club, or other larger entity, please enter the entity name.</p>
             </div>
         
             <div class="form-row">

@@ -84,3 +84,9 @@
         background-color: #ddd; /* Light gray background color */
     }
 }
+
+.instructions {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #777;
+}

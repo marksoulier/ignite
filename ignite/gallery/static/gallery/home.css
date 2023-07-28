@@ -1,0 +1,33 @@
+/* Style for the first block */
+.first-block {
+    text-align: center;
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 40px 0;
+  }
+  
+  .first-block h2 {
+    font-size: 36px;
+    color: #333; /* Dark gray text color */
+  }
+  
+  /* Style for the second block */
+  .second-block {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .second-block p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  /* Style for the third block */
+  .third-block {
+    background-color: #fffae6; /* Yellowish tint background */
+    padding: 20px;
+  }
+  
+  .warning-text {
+    font-size: 16px;
+    color: #c94c4c; /* Dark red text color */
+  }

@@ -80,7 +80,10 @@
             <div class="form-row">
                 <p class="instructions">Please attach a few images of your project. If an image of the project is impossible then add a picture of something closely related.</p>
                 <label for="image">Image 1:</label>
-                <input type="file" id="image" name="image" accept="image/*">
+                {{ form.image }}
+                {% for error in form.image.errors %}
+                    <p class="error">{{ error }}</p>
+                {% endfor %}
             </div>
 
             <div id="additional-images" style="display: none;">

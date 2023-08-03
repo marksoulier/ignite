@@ -92,33 +92,43 @@ nav {
 /* Styling for the "Add Project" link */
 .project-nav-link {
     margin: 0 10px;
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 5px;
-    background-color: lightblue; /* Light blue background color */
+    background-color: #000a38; /* Light blue background color */
     transition: background-color 0.3s ease; /* Smooth transition effect */
+    transition: color 0.3s ease; /* Smooth transition effect */
+
 }
 
 /* Hover effect: Turn gray on hover */
 .project-nav-link:hover {
     background-color: #ddd; /* Gray background color on hover */
+    color: black;
 }
 
 /* Style for the link around the image */
 .logo-link {
     text-decoration: none; /* Remove underline */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.ignite-logo {
-    max-width: 50px; /* Smaller image width */
-    height: auto;
-}
-
-/* Centering the logo */
+/* CSS for the container holding the logos */
 .logo-container {
-    text-align: center;
-}
+    display: flex;
+    justify-content: space-between;    
+  }
+
+  /* CSS for the individual logo divs */
+  .logo {
+    /* Add any styling you want for the logos here */
+    padding-left: 20px;
+    padding-right: 20px; /* Add some horizontal spacing between the logos */
+  }
 
 /* Some basic styling for the gallery */
 .gallery {

@@ -10,7 +10,7 @@ class Project(models.Model):
     contact_info = models.CharField(max_length=200, blank=True, default="No contact info")
 
     related_links = models.CharField(max_length=200, blank=True, default="No related links")
-    description = models.CharField(max_length=400)
+    description = models.TextField(blank=True, default="No description")
     date_made = models.DateTimeField("date project made")
     category = models.CharField(max_length=200)
     sub_category = models.CharField(max_length=200, blank=True, default="No sub category")

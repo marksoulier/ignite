@@ -1,8 +1,12 @@
 {% extends "gallery/base.html" %}
 
 {% block content %}
+
     <div class="category-block">
         <h2>Project Submission Form</h2>
+    </div>
+    <div class="category2-block">
+        <p>Thank you for taking time to submit a project. By doing so will allow you and your projects to be seen by other students, faculty, and industy professionals. Please submit your top 3 projects including those from class work, research projects/labs, fun personal projects, industry work, and other.</p>
     </div>
     <div class="form-body">
         <form action="" method="post" enctype="multipart/form-data" class="form-container">
@@ -27,14 +31,14 @@
 
             <div class="form-row">
                 <label for="description">Description:</label><br>
-                <textarea id="description" name="description" rows="4" class="input-box" required></textarea>
+                <textarea id="description" name="description" rows="7" class="input-box" required></textarea>
                 <p class="instructions">Please provide a quick overview of the project.</p>
             </div>
 
             <div class="form-row">
                 <label for="related_links">Related Links:</label>
                 <input type="text" id="related_links" name="related_links" class="input-box">
-                <p class="instructions">Include any related articles, tutorials, websites, books, etc. (comma-separated).</p>
+                <p class="instructions">Include any links to related articles, tutorials, websites, books, repositories, videos, etc. (comma-separated).</p>
             </div>
 
             <div class="form-row">
@@ -74,6 +78,7 @@
             </div>
         
             <div class="form-row">
+                <p class="instructions">Please attach a few images of your project. If an image of the project is impossible then add a picture of something closely related.</p>
                 <label for="image">Image 1:</label>
                 <input type="file" id="image" name="image" accept="image/*">
             </div>
@@ -87,6 +92,7 @@
             <div class="form-row">
                 <label for="contact_info">Contact Info:</label>
                 <input type="text" id="contact_info" name="contact_info" class="input-box">
+                <p class="instructions">Include contact info for you that professors, students, and industry can use to contact you. Include github, linkedin, or other portfolio sites.</p>
             </div>
 
             <div class="form-row">

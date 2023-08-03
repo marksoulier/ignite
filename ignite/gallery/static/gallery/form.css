@@ -49,13 +49,16 @@
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: lightblue;
+    background-color: #000a38;
     cursor: pointer;
+    color: white;
     transition: background-color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth transition effect */
 }
 
 .submit-button:hover {
     background-color: #ddd;
+    color: black;
 }
 
 /* Styles for the "Add Image" button */
@@ -64,26 +67,31 @@
     margin: 10px auto; /* Center the button horizontally and add some space around it */
     padding: 8px 16px;
     border-radius: 5px;
-    background-color: lightblue; /* Light blue background color */
-    color: black;
+    background-color: #000a38; /* Light blue background color */
+    color: white;
     text-decoration: none;
     border: none;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth transition effect */
+    transition: color 0.3s ease; /* Smooth transition effect */
 }
 
 /* Hover effect: Turn gray on hover */
 #add-image-button:hover {
     background-color: #ddd; /* Gray background color on hover */
+    color: black;
 }
 
+/* Additional styles for the description textarea */
+#description {
+    font-size: 12px; /* Adjust the value as needed for the desired font size */
+    font-family: Arial, sans-serif; /* Set the font family to Arial, with sans-serif as a fallback */
+  }
+  
 /* Styles for smaller screens (when the screen width is less than or equal to 500px, adjust as needed) */
 @media screen and (max-width: 500px) {
     /* Restyle the "Add Image" button on smaller screens */
-    #add-image-button {
-        background-color: #ddd; /* Light gray background color */
-    }
 }
 
 .instructions {

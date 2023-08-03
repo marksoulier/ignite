@@ -10,17 +10,25 @@
     <link rel="stylesheet" href="{% static 'gallery/form.css' %}">
     <link rel="stylesheet" href="{% static 'gallery/main.css' %}">
     <link rel="stylesheet" href="{% static 'gallery/home.css' %}">
-
+    <link rel="stylesheet" href="{% static 'gallery/project_display.css' %}">
 </head>
 <body>
     <!-- Navigation bar -->
     <nav>
         <div class="nav-container">
             <div class="logo-container">
-                <!-- Add the logo link class to the anchor tag around the image -->
-                <a href="/" class="logo-link">
-                    <img src="{% static 'images/ignite_logo2.png' %}" alt="Ignite Engineering Logo" width="150" height="75" />
-                </a>
+                <div class="logo">
+                    <!-- Add the logo link class to the anchor tag around the image -->
+                    <a href="/" class="logo-link">
+                        <img src="{% static 'images/utah_state_logo.png' %}" alt="Utah State Engineering Logo" width="100" height="75" />
+                    </a>
+                </div>
+                <div class="logo">
+                    <!-- Add the logo link class to the anchor tag around the image -->
+                    <a href="/" class="logo-link">
+                        <img src="{% static 'images/ignite_logo2.png' %}" alt="Ignite Engineering Logo" width="150" height="75" />
+                    </a>
+                </div>
             </div>
             <ul class="nav-links">
                 <li class="nav-li"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
@@ -44,8 +52,8 @@
         <div class="logo-grid">
             <img src="{% static 'images/ieee_logo.png' %}" alt="Logo 1" class="logo">
             <img src="{% static 'images/college_engineering_logo.png' %}" alt="Logo 2" class="logo">
-            <img src="{% static 'images/space_dynamics_logo.png' %}" alt="Logo 3" class="logo">
-            <img src="{% static 'images/hack_logo.jpg' %}" alt="Logo 3" class="logo">
+            {% comment %} <img src="{% static 'images/space_dynamics_logo.png' %}" alt="Logo 3" class="logo">
+            <img src="{% static 'images/hack_logo.jpg' %}" alt="Logo 3" class="logo"> {% endcomment %}
             <!-- Add more logo images as needed -->
         </div>
     </div>

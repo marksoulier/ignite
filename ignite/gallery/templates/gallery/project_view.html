@@ -1,9 +1,12 @@
 {% extends "gallery/base.html" %}
 
 {% block content %}
-    <h1>{{ project.name }}</h1>
-    <p>Name: {{ project.name }}</p>
-    <p>Owner: {{ project.owner }}</p>
+<div class="project-container">
+    <h1 style="text-align: center;">{{ project.name }}</h1>
+    <p style="font-size: 16px;">{{ project.owner }}</p>
+    <p>{{ project.date_made.date }}</p>
+    <p style="font-size: 16px;">{{ project.description }}</p>
+
     <p>Team:</p>
     <ul>
         {% for team_member in project.get_team %}
@@ -11,24 +14,12 @@
         {% endfor %}
     </ul>
 
-    <p>Contact Info:</p>
-    <ul>
-        {% for contact in project.get_contact_info %}
-            <li>{{ contact }}</li>
-        {% endfor %}
-    </ul>
-
     <p>Related Links:</p>
     <ul>
         {% for link in project.get_related_links %}
-            <li>{{ link }}</li>
+            <li><a href="{{ link }}">{{ link }}</a></li>
         {% endfor %}
     </ul>
-    <p>Description: {{ project.description }}</p>
-    <p>Date Made: {{ project.date_made }}</p>
-    <p>Category: {{ project.category }}</p>
-    <p>Sub Category: {{ project.sub_category }}</p>
-    <p>Entity: {{ project.entity }}</p>
 
     {% if project.image %}
         <img src="{{ project.image.url }}" alt="{{ project.name }} Image" style="max-width: 300px;">
@@ -36,25 +27,26 @@
 
     {% if project.image2 %}
         <img src="{{ project.image2.url }}" alt="{{ project.name }} Image 2" style="max-width: 300px;">
-    {% else %}
-        <p>No Image 2</p>
     {% endif %}
 
     {% if project.image3 %}
         <img src="{{ project.image3.url }}" alt="{{ project.name }} Image 3" style="max-width: 300px;">
-    {% else %}
-        <p>No Image 3</p>
     {% endif %}
 
     {% if project.image4 %}
         <img src="{{ project.image4.url }}" alt="{{ project.name }} Image 4" style="max-width: 300px;">
-    {% else %}
-        <p>No Image 4</p>
     {% endif %}
 
     {% if project.image5 %}
         <img src="{{ project.image5.url }}" alt="{{ project.name }} Image 5" style="max-width: 300px;">
-    {% else %}
-        <p>No Image 5</p>
     {% endif %}
+
+    <p>Contact Info:</p>
+    <ul>
+        {% for contact in project.get_contact_info %}
+            <li><a href="{{ contact }}">{{ contact }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
 {% endblock %}
